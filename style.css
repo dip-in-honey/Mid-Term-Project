@@ -287,8 +287,6 @@ a[title="Flaticon"]:hover{
 }
 
 
-/* RECENT WORKS */
-
 .recent-works{
     display: flex;
     flex-direction: column;
@@ -375,7 +373,7 @@ a[title="Flaticon"]:hover{
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* 변경된 부분 */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .show {
@@ -406,9 +404,7 @@ a[title="Flaticon"]:hover{
     font-size: 1rem;
     text-transform: uppercase;
 }
-/* 기존 스타일 유지 */
 
-/* 추가된 정보 섹션 스타일 */
 .content-section {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -455,8 +451,6 @@ a[title="Flaticon"]:hover{
     min-width: 200px;
     margin-bottom: 20px;
 }
-
-/* 기존 스타일 유지 */
 
 /* Favorite Section styles */
 #favorite {

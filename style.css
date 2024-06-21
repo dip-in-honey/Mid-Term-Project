@@ -522,7 +522,7 @@ a[title="Flaticon"]:hover{
     font-weight: 600;
     transform: translateY(-50%);
     top: 50%;
-    color: black; /* 화살표 색상 변경 */
+    color: black;
 }
 
 #favorite .controls .prev {

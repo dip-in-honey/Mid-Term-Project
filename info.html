@@ -6,17 +6,16 @@
     <title>INFO</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome 추가 -->
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
 
     <div class="frame">
         
-        <nav class="navigator">
+        <nav class="navigator fade-in">
             <h3 class="site-name">MY INTRODUCTION</h3>
             <ul>
                 <li><a class="nav-menu" href="index.html">WORK</a></li>
@@ -24,62 +23,107 @@
             </ul>
         </nav>
 
-
-
-        
-        <div class="profile-section">
+        <div class="profile-section fade-in">
             <img id="profile-picture" src="me.jpg">
             <div class="introduction">
                 <h2>ABOUT ME</h2>
-                <p>"벡엔드, 프론트엔드, 데이터분석, 인공지능 활용 등 모든 것이 가능한 걸어다니는 인간 기업이 되도록 노력 중"<br>컴퓨터공학과 출신, 학교 교과과정에서 배운 Python, java, C, C++를 좀 더 깊게 공부하고 있으며, 최종적으로 게임개발자가 되는게 꿈입니다. 고등학교때, 언리얼 엔진5를 잠깐 다뤄본 경험 말곤 없지만, 그 때의 기억이 꽤나 즐거웠기에 게임개발자를 꿈꾸고 있습니다. </p>
-                <h2>CAPABILITY</h2>
-                <p  id="capability">Python<br>java<br>C<br>C++<br>html/css</p>
+                <p>"벡엔드, 프론트엔드, 데이터분석, 인공지능 활용 등 모든 것이 가능한 걸어다니는 인간 기업이 되도록 노력 중"<br>컴퓨터공학과에 재학중이고, 학교 교과과정에서 배운 Python, java, C, C++를 좀 더 깊게 공부하고 있으며, 최종적으로 게임개발자가 되는게 꿈입니다. 고등학교때, 언리얼 엔진5를 잠깐 다뤄본 경험 말곤 없지만, 그 때의 기억이 꽤나 즐거웠기에 게임개발자를 꿈꾸고 있습니다. </p>
+                
+                <section class="content-section fade-in">
+                    <div class="container">
+                        <div class="content-section-heading">
+                            <h3 class="text-secondary mb-0">About me</h3>
+                            <h2 class="mb-5">Information</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                                    <i class="fas fa-user"></i> <!-- Profile 아이콘 -->
+                                <h4>
+                                    <strong>Profile</strong>
+                                </h4>
+                                <hr>
+                                <p>이름 : 최정민</p>
+                                <p>성별 : 남</p>
+                                <p>생년월일 : 2003.12.29</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                                    <i class="fas fa-briefcase"></i> <!-- Career 아이콘 -->
+                                <h4>
+                                    <strong>Career</strong>
+                                </h4>
+                                <hr>
+                                <p>2016-소사초등학교 졸업</p>
+                                <p>2019-부일중학교 졸업</p>
+                                <p>2022-소사고등학교 졸업</p>
+                                <p>2022-단국대학교 컴퓨터공학과 입학</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                                    <i class="fas fa-heart"></i> <!-- Interesting 아이콘 -->
+                                <h4>
+                                    <strong>Interesting</strong>
+                                </h4>
+                                <hr>
+                                <p>취미 : 소설책 읽기</p>
+                                <p>좋아하는 것 : 강아지</p>
+                                <p>싫어하는 것 : 모기</p>
+                                <p>장점 : 열정</p>
+                                <p>단점 : 흥미외의 것 배제</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                    <i class="fas fa-laptop-code"></i> <!-- Skill 아이콘 -->
+                                <h4>
+                                    <strong>Skill</strong>
+                                </h4>
+                                <hr>
+                                <p>Python, Java</p>
+                                <p>C, C++</p>
+                                <p>HTML, CSS, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
-        <h5 class="value-menu">MY VALUES</h5>
+        <h5 class="value-menu fade-in">MY VALUES</h5>
 
         <div class="value-section">
             
-            <div class="value">
-                <img class="value-icon" src="together.png">
+            <div class="value fade-in">
+                <img class="value-icon" src="teamwork.png">
                 <div class="value-intro">
                     <h4 class="value-name">TEAMWORK</h4>
-                    <p class="value-exp">팀워크는 모든 개발 프로젝트의 성공에 필수적입니다. 좋은 팀워크는 팀원 간의 협력과 조화를 통해 효율성을 극대화하고, 프로젝트의 목표를 효과적으로 달성할 수 있게 합니다.</p>
+                    <p class="value-exp">팀워크는 거의 대부분의 협업 프로젝트에서 필수적인 요소라고 생각합니다. 만약, 팀워크가 좋지 않다면 그 프로젝트는 성공적으로 마무리 될 확률이 낮을 것입니다.</p>
                 </div>
             </div>
 
-
-            <div class="value">
-                <img class="value-icon" src="partnership.png">
+            <div class="value fade-in">
+                <img class="value-icon" src="openmind.png">
                 <div class="value-intro">
                     <h4 class="value-name">OPEN MIND</h4>
-                    <p class="value-exp">피드백을 받을 때 방어적인 태도보다는 열린 마음으로 받아들이는 것이 중요합니다. 이는 자신의 발전을 위한 기회로 생각해야 합니다.</p>
+                    <p class="value-exp">피드백을 받을 때 방어적인 태도보다는 열린 마음으로 받아들이며, 이를 통해 자신을 발전시킬 수 있다고 생각합니다.</p>
                 </div>
             </div>
-            <div class="value">
-                <img class="value-icon" src="dove.png">
+            <div class="value fade-in">
+                <img class="value-icon" src="learning.png">
                 <div class="value-intro">
-                    <h4 class="value-name">CONTINOUS LEARNING</h4>
-                    <p class="value-exp">새로운 프로그래밍 언어, 프레임워크, 도구 등을 지속적으로 학습합니다. 이를 통해 더 효율적이고 현대적인 솔루션을 제공할 수 있습니다.</p>
+                    <h4 class="value-name">CONTINUOUS LEARNING</h4>
+                    <p class="value-exp">새로운 프로그래밍 언어, 프레임워크, 도구 등을 계속하여 학습해야 한다고 생각합니다.</p>
+                    <p class="value-exp">현재를 보더라도 인공지능이 큰 폭으로 발전하고 있는데, 이를 배우고 활용하려 하지 않는다면, 다른 개발자들에 비해 많이 뒤쳐질 가능성이 크다고 생각합니다.</p>
                 </div>
             </div>
         </div>
 
-
-
-
-        <footer class="footer">
+        <footer class="footer fade-in">
             <h3 class="contact">CONTACT ME</h3>
             <div class="links">
                 <a class="instagram" href="https://www.instagram.com/jung200312/">INSTAGRAM</a>
             </div>
-            <p>instagram, E-mail 상관없이 자유롭게 연락 주셔도 됩니다.</p>
-            <p class="english-comment">jung200312@naver.com</p>
+            <p>instagram, E-mail 상관없이 자유롭게 연락 주세요!</p>
+            <p class="korean2-comment">jung200312@naver.com</p>
         </footer>
-        
-
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

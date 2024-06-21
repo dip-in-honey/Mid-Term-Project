@@ -452,32 +452,32 @@ a[title="Flaticon"]:hover{
     margin-bottom: 20px;
 }
 
-/* Favorite Section styles */
+/* Favorite */
 #favorite {
-    background-color: #B58F94;
+    background-color: #EFE7E3;
     position: relative;
     background-size: cover;
 }
 
 #favorite .slide_warp {
-    width: 960px;
+    width: 1050px; /* 슬라이드 컨테이너 너비 조정 */
     height: 430px;
     margin: 50px auto;
     position: relative;
     overflow: hidden;
+    display: flex; /* Flexbox 사용하여 슬라이드 요소 정렬 */
 }
 
-#favorite .slide_warp .slides {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: left 0.5s ease-in-out;
+#favorite .slides {
+    display: flex; /* Flexbox 사용하여 슬라이드 요소 정렬 */
+    transition: transform 0.5s ease-in-out; /* transition 사용 */
+    width: max-content; /* 슬라이드 너비를 내용에 맞춤 */
 }
 
-#favorite .slide_warp .slides li:not(:last-child) {
-    position: relative;
-    float: left;
-    margin-right: 30px;
+#favorite .slides li {
+    min-width: 300px; /* 슬라이드 최소 너비 지정 */
+    margin-right: 30px; /* 슬라이드 간격 조정 */
+    list-style: none; /* 리스트 스타일 제거 */
 }
 
 #favorite .slide_img_box {
@@ -520,14 +520,15 @@ a[title="Flaticon"]:hover{
     font-size: 40px;
     cursor: pointer;
     font-weight: 600;
-    transform: translateY(-50);
+    transform: translateY(-50%);
     top: 50%;
+    color: black; /* 화살표 색상 변경 */
 }
 
 #favorite .controls .prev {
-    left: 100px;
+    left: 10px; /* 왼쪽 버튼 위치 조정 */
 }
 
 #favorite .controls .next {
-    right: 100px;
+    right: 10px; /* 오른쪽 버튼 위치 조정 */
 }

@@ -39,3 +39,39 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(type, index * 2000); // Delay each line's typing animation
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelector(".slides");
+    const slide = document.querySelectorAll(".slides li");
+    const slideCount = slide.length;
+    let currentIdx = 0;
+    const slideWidth = 330; // 슬라이드 폭과 마진 포함한 값
+    const slideMargin = 30;
+
+    slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
+
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    function moveSlide(num) {
+        slides.style.transform = `translateX(${-num * (slideWidth + slideMargin)}px)`;
+        currentIdx = num;
+    }
+
+    nextBtn.addEventListener('click', function() {
+        if (currentIdx < slideCount - 3) {
+            moveSlide(currentIdx + 1);
+        } else {
+            moveSlide(0);
+        }
+    });
+
+    prevBtn.addEventListener('click', function() {
+        if (currentIdx > 0) {
+            moveSlide(currentIdx - 1);
+        } else {
+            moveSlide(slideCount - 3);
+        }
+    });
+});

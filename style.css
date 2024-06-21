@@ -452,11 +452,33 @@ a[title="Flaticon"]:hover{
     margin-bottom: 20px;
 }
 
+/* 기존 CSS 유지 */
+
+/* Fade-in 효과 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Favorite */
 #favorite {
     background-color: #EFE7E3;
     position: relative;
     background-size: cover;
+    opacity: 0; /* 초기 상태에서 투명하게 설정 */
+    transform: translateY(20px); /* 초기 상태에서 약간 아래로 이동 */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* 서서히 나타나는 효과 */
+}
+
+#favorite.show {
+    opacity: 1; /* 서서히 나타날 때의 투명도 설정 */
+    transform: translateY(0); /* 위치를 제자리로 이동 */
 }
 
 #favorite .slide_warp {
@@ -558,3 +580,5 @@ a[title="Flaticon"]:hover{
     max-width: 600px;
     text-align: center;
 }
+
+

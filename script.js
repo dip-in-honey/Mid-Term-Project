@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelector(".slides");
-    const slide = document.querySelectorAll(".slides li");
-    const slideCount = slide.length;
+    const slideItems = document.querySelectorAll(".slides li");
+    const slideCount = slideItems.length;
     let currentIdx = 0;
     const slideWidth = 330; // 슬라이드 폭과 마진 포함한 값
     const slideMargin = 30;
@@ -57,6 +57,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function moveSlide(num) {
         slides.style.transform = `translateX(${-num * (slideWidth + slideMargin)}px)`;
         currentIdx = num;
+        showSlides(); // 슬라이드 이동 후에 서서히 나타나는 효과 적용
+    }
+
+    function showSlides() {
+        slideItems.forEach((item, index) => {
+            if (index >= currentIdx && index < currentIdx + 3) {
+                item.classList.add('show');
+            } else {
+                item.classList.remove('show');
+            }
+        });
     }
 
     nextBtn.addEventListener('click', function() {
@@ -74,4 +85,20 @@ document.addEventListener('DOMContentLoaded', function() {
             moveSlide(slideCount - 3);
         }
     });
+
+    showSlides(); // 페이지 로드 시 초기 슬라이드 표시
+
+    // Fade-in 효과 적용
+    const favoriteSection = document.querySelector("#favorite");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                favoriteSection.classList.add("show");
+            }
+        });
+    });
+
+    observer.observe(favoriteSection);
 });
+
+

@@ -291,49 +291,56 @@ a[title="Flaticon"]:hover{
     display: flex;
     flex-direction: column;
 }
-
-.article{
+.article {
     display: flex;
     flex-direction: row;
     margin-bottom: 120px;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.thumbnail{
+.thumbnail {
     width: 600px;
+    margin-right: 40px;
 }
 
-.article-info{
-    margin: 0px 20px;
+.article-info {
+    margin: 0px 40px;
+    flex: 1; 
 }
 
-.article-name{
+.article-name {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 50px;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
-.article-name:hover{
+.article-name:hover {
     color: pink;
     -webkit-text-stroke: 1px black;
     transition: 0.3s;
 }
 
-
-
-.article-comment{
+.article-comment {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 100;
+    margin-top: 10px;
+}
+.article-comment2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: -60px;
+    margin-top: 10px;
 }
 
-.more{
+
+.more {
     width: content;
     height: content;
     float: right;
     margin-right: 10px;
-
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -471,35 +478,35 @@ a[title="Flaticon"]:hover{
     background-color: #EFE7E3;
     position: relative;
     background-size: cover;
-    opacity: 0; /* 초기 상태에서 투명하게 설정 */
-    transform: translateY(20px); /* 초기 상태에서 약간 아래로 이동 */
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* 서서히 나타나는 효과 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 #favorite.show {
-    opacity: 1; /* 서서히 나타날 때의 투명도 설정 */
-    transform: translateY(0); /* 위치를 제자리로 이동 */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #favorite .slide_warp {
-    width: 1050px; /* 슬라이드 컨테이너 너비 조정 */
+    width: 1050px;
     height: 430px;
     margin: 50px auto;
     position: relative;
     overflow: hidden;
-    display: flex; /* Flexbox 사용하여 슬라이드 요소 정렬 */
+    display: flex;
 }
 
 #favorite .slides {
-    display: flex; /* Flexbox 사용하여 슬라이드 요소 정렬 */
-    transition: transform 0.5s ease-in-out; /* transition 사용 */
-    width: max-content; /* 슬라이드 너비를 내용에 맞춤 */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
 }
 
 #favorite .slides li {
-    min-width: 300px; /* 슬라이드 최소 너비 지정 */
-    margin-right: 30px; /* 슬라이드 간격 조정 */
-    list-style: none; /* 리스트 스타일 제거 */
+    min-width: 300px;
+    margin-right: 30px;
+    list-style: none;
 }
 
 #favorite .slide_img_box {
@@ -548,11 +555,11 @@ a[title="Flaticon"]:hover{
 }
 
 #favorite .controls .prev {
-    left: 10px; /* 왼쪽 버튼 위치 조정 */
+    left: 10px;
 }
 
 #favorite .controls .next {
-    right: 10px; /* 오른쪽 버튼 위치 조정 */
+    right: 10px;
 }
 
 /* Role Model Section */

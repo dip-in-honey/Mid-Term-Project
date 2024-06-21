@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const char = text.charAt(i);
                 element.textContent += char;
                 i++;
-                setTimeout(type, 100); // Adjust typing speed here
+                setTimeout(type, 100);
             }
         }
 
-        setTimeout(type, index * 2000); // Delay each line's typing animation
+        setTimeout(type, index * 2000); 
     });
 });
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideItems = document.querySelectorAll(".slides li");
     const slideCount = slideItems.length;
     let currentIdx = 0;
-    const slideWidth = 330; // 슬라이드 폭과 마진 포함한 값
+    const slideWidth = 330;
     const slideMargin = 30;
 
     slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function moveSlide(num) {
         slides.style.transform = `translateX(${-num * (slideWidth + slideMargin)}px)`;
         currentIdx = num;
-        showSlides(); // 슬라이드 이동 후에 서서히 나타나는 효과 적용
+        showSlides(); 
     }
 
     function showSlides() {
@@ -86,9 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    showSlides(); // 페이지 로드 시 초기 슬라이드 표시
+    showSlides();
 
-    // Fade-in 효과 적용
     const favoriteSection = document.querySelector("#favorite");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

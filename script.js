@@ -49,15 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideWidth = 330;
     const slideMargin = 30;
 
-    slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
+    if (slides) {
+        slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + 'px';
+    }
 
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
 
     function moveSlide(num) {
-        slides.style.transform = `translateX(${-num * (slideWidth + slideMargin)}px)`;
-        currentIdx = num;
-        showSlides(); 
+        if (slides) {
+            slides.style.transform = `translateX(${-num * (slideWidth + slideMargin)}px)`;
+            currentIdx = num;
+            showSlides();
+        }
     }
 
     function showSlides() {
@@ -70,34 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    nextBtn.addEventListener('click', function() {
-        if (currentIdx < slideCount - 3) {
-            moveSlide(currentIdx + 1);
-        } else {
-            moveSlide(0);
-        }
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            if (currentIdx < slideCount - 3) {
+                moveSlide(currentIdx + 1);
+            } else {
+                moveSlide(0);
+            }
+        });
+    }
 
-    prevBtn.addEventListener('click', function() {
-        if (currentIdx > 0) {
-            moveSlide(currentIdx - 1);
-        } else {
-            moveSlide(slideCount - 3);
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            if (currentIdx > 0) {
+                moveSlide(currentIdx - 1);
+            } else {
+                moveSlide(slideCount - 3);
+            }
+        });
+    }
 
     showSlides();
 
     const favoriteSection = document.querySelector("#favorite");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                favoriteSection.classList.add("show");
-            }
+    if (favoriteSection) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    favoriteSection.classList.add("show");
+                }
+            });
         });
-    });
 
-    observer.observe(favoriteSection);
+        observer.observe(favoriteSection);
+    }
 });
-
-
